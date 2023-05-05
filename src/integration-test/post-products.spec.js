@@ -14,9 +14,29 @@ describe('post products tests ', async function () {
             .expectStatus(201)
             .expectJsonLike(
                 {
-                    id: "$S{id}"
+                    id: "$S{idProduct}"
                 }
-            );
+            )
+            .expectJsonSchema({
+                "type": "object",
+                "properties": {
+                    "nome": {
+                        "type": "string"
+                    },
+                    "descricao": {
+                        "type": "string"
+                    },
+                    "preco": {
+                        "type": "string"
+                    },
+                    "categoria_id": {
+                        "type": "integer"
+                    },
+                    "id": {
+                        "type": "integer"
+                    }
+                }
+            });
         await _spec.toss();
         addContext(this, {
             title: 'CreateProductRequestDto',
@@ -26,6 +46,6 @@ describe('post products tests ', async function () {
             title: 'CreateProductResponseDto',
             value: _spec._response.body,
         });
-        
+
     });
 })

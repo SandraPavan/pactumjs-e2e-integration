@@ -41,20 +41,6 @@
       "descricao": "",
       "preco": 7.5,
       "categoria_id": 2
-    },
-    {
-      "nome": "non quam",
-      "descricao": "Blanditiis dolorum voluptatum consectetur eligendi corporis porro voluptatum. Iste totam necessitatibus hic repudiandae aliquam asperiores quaerat illo. Fugiat eos explicabo hic aliquid occaecati quam distinctio modi. Quidem quisquam maxime accusantium.\nQuas nihil rerum alias ducimus culpa. Assumenda recusandae ratione quis officiis doloribus dignissimos facere repellendus. A officia ex veniam delectus enim maxime.\nSoluta nam doloribus tempora esse quidem fugiat. Id quos sequi perferendis itaque aut dolor nisi. Sint odit ad quo aperiam magni recusandae occaecati iste. Sint nam minima veritatis.",
-      "preco": "545.00",
-      "categoria_id": 1,
-      "id": 7
-    },
-    {
-      "nome": "culpa quas",
-      "descricao": "illum",
-      "preco": "850.00",
-      "categoria_id": 1,
-      "id": 8
     }
   ],
   "categorias": [
