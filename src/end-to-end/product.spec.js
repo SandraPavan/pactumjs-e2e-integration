@@ -5,7 +5,7 @@ describe('AddProduct_ReadProduct', () => {
 
   let test_case = e2e('Add Product');
 
-  it('create user', async () => {
+  it('create product', async () => {
     await test_case.step('Post Product')
       .spec()
       .post('http://localhost:3000/produtos')
