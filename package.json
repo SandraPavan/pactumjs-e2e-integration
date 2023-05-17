@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-integration": "mocha src/integration-test  -- --reporter mochawesome",
-    "test-e2e": "mocha src/end-to-end  -- --reporter mochawesome",
+    "test-integration": "dotenv -e .env mocha src/integration-test  -- --reporter mochawesome",
+    "test-e2e": "dotenv -e .env mocha src/end-to-end  -- --reporter mochawesome",
     "jsonserver": "json-server --watch db.json"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv-cli": "^7.2.1",
     "json-server": "^0.17.3",
     "mocha": "^10.2.0"
   },

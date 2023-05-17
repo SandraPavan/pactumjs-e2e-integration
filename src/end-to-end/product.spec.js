@@ -8,19 +8,19 @@ describe('AddProduct_ReadProduct', () => {
   it('create product', async () => {
     await test_case.step('Post Product')
       .spec()
-      .post('http://localhost:3000/produtos')
+      .post('/produtos')
       .withJson(getFakeProduct())
       .expectStatus(201)
       .stores('idProduct','id')
       .clean()
-      .delete('http://localhost:3000/produtos/$S{idProduct}')
+      .delete('/produtos/$S{idProduct}')
       .expectStatus(200);
   });
 
   it('get product id', async () => {
     await test_case.step('Get Product')
       .spec()
-      .get('http://localhost:3000/produtos/$S{idProduct}')
+      .get('/produtos/$S{idProduct}')
       .expectStatus(200)
       .expectJsonLike(
         {

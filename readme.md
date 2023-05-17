@@ -8,6 +8,7 @@ Tecnologias utilizadas:
 - [Faker JS](https://fakerjs.dev/guide/)
 - [Mocha JS](https://mochajs.org/#installation)
 - [Mochawesome](https://www.npmjs.com/package/mochawesome)
+- [dotenv-cli](https://www.npmjs.com/package/dotenv-cli)
 
 
 Como utilizar o projeto:

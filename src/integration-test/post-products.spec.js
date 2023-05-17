@@ -8,7 +8,7 @@ before(async function () {
 
 describe('post products tests ', async function () {
 
-    request.setBaseUrl('http://localhost:3000/')
+    
     it('should create a product', async function () {
         const _spec = spec('create a product')
             .expectStatus(201)

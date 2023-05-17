@@ -9,7 +9,7 @@ before(async function () {
 
 describe('put products tests ', async function () {
 
-    request.setBaseUrl('http://localhost:3000/')
+    
     beforeEach(async function () {
         await spec('create a product')
         .expectStatus(201)
@@ -21,7 +21,7 @@ describe('put products tests ', async function () {
     })
        it('should edit product', async function () {
         const _spec = spec()
-            .put('produtos/$S{idProduct}')
+            .put('/produtos/$S{idProduct}')
             .withJson(getFakeProduct())
             .expectStatus(200);
         await _spec.toss();
