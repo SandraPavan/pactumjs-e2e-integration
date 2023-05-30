@@ -9,17 +9,23 @@ before(async function () {
 
 describe('put products tests ', async function () {
 
-    
+
     beforeEach(async function () {
         await spec('create a product')
-        .expectStatus(201)
-        .expectJsonLike(
-            {
-                id: "$S{idProduct}"
-            }
-        );
+            .expectStatus(201)
+            .expectJsonLike(
+                {
+                    id: "$S{idProduct}"
+                }
+            );
     })
-       it('should edit product', async function () {
+
+    afterEach(async function () {
+        await spec()
+            .delete('/produtos/$S{idProduct}')
+            .expectStatus(200);
+    })
+    it('should edit product', async function () {
         const _spec = spec()
             .put('/produtos/$S{idProduct}')
             .withJson(getFakeProduct())

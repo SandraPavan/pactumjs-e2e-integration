@@ -7,8 +7,11 @@ before(async function () {
 });
 
 describe('post products tests ', async function () {
-
-    
+    afterEach(async function () {
+        await spec()
+            .delete('/produtos/$S{idProduct}')
+            .expectStatus(200);
+    })    
     it('should create a product', async function () {
         const _spec = spec('create a product')
             .expectStatus(201)
